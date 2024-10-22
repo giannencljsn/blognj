@@ -244,7 +244,7 @@
                             <a href="#" class="dropdown-item">Feedback</a>
                             <div class="dropdown-divider"></div>
                             <a href="./back/settings.html" class="dropdown-item">Settings</a>
-                            <a href="./back/sign-in.html" class="dropdown-item">Logout</a>
+                            <a href="{{ route('author.logout') }}" class="dropdown-item">Logout</a>
                         </div>
                     </div>
                 </div>
