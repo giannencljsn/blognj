@@ -16,8 +16,8 @@ class AuthorLoginForm extends Component
         $this->email = trim($this->email);
         $this->password = trim($this->password);  // This will remove any trailing spaces
 
-        // Optional: Log the trimmed password for verification (remove this in production)
-        logger()->info('Trimmed Password: ' . $this->password);
+        // // Optional: Log the trimmed password for verification (remove this in production)
+        // logger()->info('Trimmed Password: ' . $this->password);
 
         // Validate the inputs
         $this->validate([
