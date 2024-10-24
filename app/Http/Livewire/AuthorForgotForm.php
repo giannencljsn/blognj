@@ -25,7 +25,8 @@ class AuthorForgotForm extends Component
         $token = base64_encode(Str::random(64));
         DB::table('password_resets')->insert([
             'email' => $this->email,
-            'token' => Carbon::now(),
+            'token' => $token,
+            'created_at' => Carbon::now(),
         ]);
 
         $user = User::where('email', $this->email)->first();
