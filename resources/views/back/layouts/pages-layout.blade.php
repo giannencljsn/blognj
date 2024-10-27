@@ -239,9 +239,7 @@
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <a href="#" class="dropdown-item">Status</a>
-                            <a href="./back/profile.html" class="dropdown-item">Profile</a>
-                            <a href="#" class="dropdown-item">Feedback</a>
+                            <a href="{{ route('author.profile') }}" class="dropdown-item">Profile</a>
                             <div class="dropdown-divider"></div>
                             <a href="./back/settings.html" class="dropdown-item">Settings</a>
                             <a href="{{ route('author.logout') }}" class="dropdown-item">Logout</a>
@@ -319,11 +317,11 @@
         <div class="page-wrapper">
             @include('back.layouts.inc.header')
             <!-- Page header -->
-            <div class="page-header d-print-none">
+            <!-- <div class="page-header d-print-none">
                 <div class="container-xl">
                     @yield('pageHeader')
                 </div>
-            </div>
+            </div> -->
             <!-- Page body -->
             <div class="page-body">
                 <div class="container-xl">
