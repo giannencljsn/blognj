@@ -34,37 +34,7 @@
                 <div class="tab-pane active show" id="tabs-details">
                     <h4>Personal Details</h4>
                     <div>
-                        <form action="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label class="form-label">Name</label>
-                                        <input type="text" class="form-control" name="name" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label class="form-label">Username</label>
-                                        <input type="text" class="form-control" name="username" placeholder="Username">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label class="form-label">Email</label>
-                                        <input type="text" class="form-control" name="email" placeholder="Email"
-                                            disabled>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Biography</label>
-                                <textarea class="form-control" name="example-textarea"
-                                    placeholder="Content">Biography...</textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Save Changes</button>
-                        </form>
+                        @livewire('author-personal-details')
                     </div>
                 </div>
                 <div class="tab-pane" id="tabs-password">
