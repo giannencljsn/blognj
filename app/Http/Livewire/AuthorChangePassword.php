@@ -46,7 +46,7 @@ class AuthorChangePassword extends Component
 
     public function showToastr($message, $type)
     {
-        return $this->dispatchBrowserEvent('showToast', [
+        return $this->dispatchBrowserEvent('showToastr', [
             'type' => $type,
             'message' => $message
 
