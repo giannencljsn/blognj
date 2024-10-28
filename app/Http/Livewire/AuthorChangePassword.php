@@ -30,8 +30,28 @@ class AuthorChangePassword extends Component
             'confirm_new_password.required' => 'You must confirm the new password.',
             'confirm_new_password.same' => 'The confirmation password must match the new password.'
         ]);
+
+        $query = User::find(auth('web')->id())->update([
+            'password' => Hash::make($this->new_password)
+        ]);
+
+        if ($query) {
+            $this->showToastr('Your Password has been successfully updated.', 'success');
+            $this->current_password = $this->new_password = $this->confirm_new_password = null;
+        } else {
+            $this->showToastr('Something went wrong.', 'error');
+        }
     }
 
+
+    public function showToastr($message, $type)
+    {
+        return $this->dispatchBrowserEvent('showToast', [
+            'type' => $type,
+            'message' => $message
+
+        ]);
+    }
     public function render()
     {
         return view('livewire.author-change-password');

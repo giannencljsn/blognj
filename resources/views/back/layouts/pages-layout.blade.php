@@ -22,6 +22,8 @@
     <link href="./back/dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet" />
     <link href="./back/dist/css/demo.min.css?1692870487" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('back/dist/libs/ijabo/ijabo.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     @stack('stylesheets')
     @livewireStyles
     <style>
@@ -33,6 +35,36 @@
 
         body {
             font-feature-settings: "cv03", "cv04", "cv11";
+        }
+    </style>
+
+    <style>
+        .far {
+            position: absolute;
+            right: 14px;
+            bottom: 77px;
+            padding: 15px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            font-size: 25px;
+        }
+
+
+        .far:hover {
+            background: #341b6385;
+        }
+    </style>
+
+    <style>
+        .field-icon {
+            float: right;
+            padding-right: 2vw;
+            margin-left: -25px;
+            margin-top: -25px;
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
@@ -470,6 +502,19 @@
                     toastr.warning(event.detail.message);
                 } else {
                     return false;
+                }
+            });
+        </script>
+
+        <script>
+            $(".toggle-password").click(function () {
+
+                $(this).toggleClass("fa-eye fa-eye-slash");
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
                 }
             });
         </script>
