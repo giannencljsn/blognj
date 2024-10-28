@@ -38,9 +38,7 @@
                     </div>
                 </div>
                 <div class="tab-pane" id="tabs-password">
-                    <h4>Change Password</h4>
-                    <div>Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem nunc
-                        amet, pellentesque id egestas velit sed</div>
+                    @livewire('author-change-password')
                 </div>
                 <div class="tab-pane" id="tabs-settings-ex2">
                     <h4>Settings tab</h4>

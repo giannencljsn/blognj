@@ -451,9 +451,28 @@
 
     <!-- Tabler Core -->
     <script src="./back/dist/js/tabler.min.js?1692870487" defer></script>
-    <script src="./back/dist/js/demo.min.js?1692870487" defer></script>
-    @stack('scripts')
-    @livewireScripts
+    <scrip src="./back/dist/js/demo.min.js?1692870487" defer>
+        </script>
+        @stack('scripts')
+        @livewireScripts
+
+        <script>
+            window.addEventListener('showToastr', function (event) {
+                toastr.remove();
+                if (event.detail.type === 'info') {
+                    toastr.info(event.detail.message);
+
+                } else if (event.detail.type === 'success') {
+                    toastr.success(event.detail.message);
+                } else if (event.detail.type === 'error') {
+                    toastr.error(event.detail.message);
+                } else if (event.detail.type === 'warning') {
+                    toastr.warning(event.detail.message);
+                } else {
+                    return false;
+                }
+            });
+        </script>
 </body>
 
 </html>

@@ -32,9 +32,22 @@ class AuthorPersonalDetails extends Component
 
         $this->emit('updateAuthorProfileHeader');
         $this->emit('updateTopHeader');
+
+        $this->showToastr('Profile Info Successfully Updated', 'success');
+    }
+
+    public function showToastr($message, $type)
+    {
+        return $this->dispatchBrowserEvent('showToastr', [
+            'type' => $type,
+            'message' => $message
+
+        ]);
     }
     public function render()
     {
         return view('livewire.author-personal-details');
     }
+
+
 }
