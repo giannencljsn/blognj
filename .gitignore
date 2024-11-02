@@ -13,3 +13,10 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+
+storage/debugbar/*.json
+# Laravel storage and cache files
+/storage/debugbar/*
+/storage/logs/*
+/bootstrap/cache/*
