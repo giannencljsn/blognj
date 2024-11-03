@@ -4,16 +4,14 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\User;
-
 class TopHeader extends Component
 {
-
     public $author;
+
     protected $listeners = [
-        'updateTopHeader' => '$refresh'
+        'updateTopHeader'=>'$refresh'
     ];
-    public function mount()
-    {
+    public function mount(){
         $this->author = User::find(auth('web')->id());
     }
     public function render()
