@@ -296,6 +296,31 @@ footer.footer-bg{
 .mark, mark {
   padding: 0;
 }
+.navigation .container {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width as needed */
+    justify-content: center;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.centerit {
+    max-width: 200px; /* Restrict width of .centerit */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-actions {
+    width: 40%; /* Expand the width of the search form */
+}
 
 .navigation {
   background-color: #FFFCF5;
