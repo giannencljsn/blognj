@@ -1,4 +1,4 @@
-<footer class="bg-dark mt-5">
+<footer class="footer-bg">
     <div class="container section">
         <div class="row">
             <div class="col-lg-10 mx-auto text-center">
@@ -18,6 +18,8 @@
             </div>
         </div>
     </div>
-    <div class="copyright bg-dark content">&copy; <script>document.write(new Date().getFullYear())</script> Designed &amp; Developed By <a
-            href="/">{{ blogInfo()->blog_name }}</a></div>
+    <div class="copyright bg-dark content">&copy;
+        <script>document.write(new Date().getFullYear())</script> Designed &amp; Developed By <a
+            href="/">{{ blogInfo()->blog_name }}</a>
+    </div>
 </footer>

@@ -29,6 +29,8 @@
 
     <!-- # CSS Plugins -->
     <link rel="stylesheet" href="/front/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/back/dist/css/tabler.css">
+    <link rel="stylesheet" href="/back/dist/css/tabler.min.css">
     @stack('stylesheets')
 
     <!-- # Main Style Sheet -->
@@ -37,7 +39,7 @@
 
 <body>
 
-   @include('front.layouts.inc.header')
+    @include('front.layouts.inc.header')
 
     <main>
         <section class="section">
@@ -47,7 +49,7 @@
         </section>
     </main>
 
-  @include('front.layouts.inc.footer')
+    @include('front.layouts.inc.footer')
 
 
     <!-- # JS Plugins -->
@@ -56,6 +58,10 @@
     @stack('scripts')
     <!-- Main Script -->
     <script src="/front/js/script.js"></script>
+
+    <!-- JS library for carousel -->
+    <script src="/front/js/tabler.min.js?1692870487" defer=""></script>
+    <script src="/front/js/demo.min.js?1692870487" defer=""></script>
 
 </body>
 

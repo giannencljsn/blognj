@@ -171,7 +171,7 @@ select:focus {
 }
 
 a:hover {
-  color: #13AE6F;
+  color: #77d3ed;
 }
 
 .slick-slide {
@@ -179,7 +179,6 @@ a:hover {
 }
 
 .section {
-  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -266,8 +265,14 @@ a:hover {
 }
 
 .bg-dark {
-  background-color: #131313 !important;
+  background-color: #289dbe !important;
 }
+
+footer.footer-bg{
+    background-color: #5a9db0 !important;
+}
+
+
 
 @media screen and (min-width: 1400px) {
   .container {
@@ -293,9 +298,10 @@ a:hover {
 }
 
 .navigation {
-  background-color: transparent;
+  background-color: #FFFCF5;
 }
 .navigation .navbar {
+    background-color: #FFFCF5;
   border-bottom: 1px solid #ececec;
   padding: 25px 0;
 }
@@ -612,6 +618,9 @@ a.post-title-sm:hover {
 }
 
 /* blog */
+section.section{
+    background-color: #FFFCF5;
+}
 .pagination {
   justify-content: center;
 }
@@ -734,7 +743,7 @@ a.post-title-sm:hover {
   color: inherit !important;
   display: inline;
   text-decoration: none;
-  background-image: linear-gradient(#3deaa4, #3deaa4);
+  background-image: linear-gradient(#77d3ed, #77d3ed);
   background-position: 0% 110%;
   background-repeat: no-repeat;
   background-size: 100% 3px;
@@ -745,7 +754,7 @@ a.post-title-sm:hover {
   background-size: 100% 100%;
 }
 .content.bg-dark a:hover {
-  background-image: linear-gradient(rgba(19, 174, 111, 0.4), rgba(19, 174, 111, 0.4));
+  background-image: linear-gradient(rgba(74,183,213,0.4), rgba(74,183,213,0.4));
 }
 .content ol {
   padding-left: 20px;
@@ -917,7 +926,7 @@ a.post-title-sm:hover {
 }
 
 .copyright {
-  background-color: #0e0e0e !important;
+  background-color: #0c4859  !important;
   color: #e8e8e8;
   padding: 20px 0;
   font-size: 14px;
@@ -929,7 +938,7 @@ footer .section {
 }
 
 .navbar-footer .nav-link:hover {
-  color: #13AE6F;
+  color: #4AB7D5;
   text-decoration: underline;
 }
 
