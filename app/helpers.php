@@ -154,10 +154,7 @@ if (!function_exists('sendMail')) {
         $mail->Password = env('MAIL_PASSWORD');
         $mail->SMTPSecure = env('MAIL_ENCRYPTION');
         $mail->Port = env('MAIL_PORT');
-        $mail->setFrom($mailConfig['mail_from_email'], $mailConfig['mail_from_name']);
         $mail->addAddress($mailConfig['mail_recipient_email'], $mailConfig['mail_recipient_name']);
-        $mail->isHTML(true);
-        $mail->Subject = $mailConfig['mail_subject'];
         $mail->Body = $mailConfig['mail_body'];
 
         if ($mail->send()) {
