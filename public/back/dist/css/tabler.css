@@ -15950,9 +15950,7 @@ body:not(.theme-dark) .hide-theme-light {
   .theme-dark .apexcharts-legend-text {
     color: inherit !important;
   }
-  .theme-dark .navbar-brand-autodark {
-    filter: brightness(0) invert(1);
-  }
+
   .theme-dark .table thead th, .theme-dark .markdown > table thead th,
   .theme-dark .input-group-text {
     background: transparent;
@@ -16086,9 +16084,7 @@ body:not(.theme-dark) .hide-theme-light {
     .theme-dark-auto .apexcharts-legend-text {
       color: inherit !important;
     }
-    .theme-dark-auto .navbar-brand-autodark {
-      filter: brightness(0) invert(1);
-    }
+
     .theme-dark-auto .table thead th, .theme-dark-auto .markdown > table thead th,
     .theme-dark-auto .input-group-text {
       background: transparent;

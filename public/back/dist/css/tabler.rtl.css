@@ -9316,7 +9316,7 @@ body:not(.theme-dark) .hide-theme-light {
       background: #1e293b !important;
       border-bottom: 1px solid #2c3c56 !important; }
   .theme-dark .navbar-brand-autodark {
-    filter: brightness(0) invert(1); }
+
   .theme-dark .table thead th, .theme-dark .markdown > table thead th,
   .theme-dark .input-group-text {
     background: transparent; }
@@ -9326,7 +9326,9 @@ body:not(.theme-dark) .hide-theme-light {
   .theme-dark .list-group-header {
     background: #1b2434; }
   .theme-dark .apexcharts-radialbar-area {
-    stroke: #2c3c56; } }
+    stroke: #2c3c56; }
+
+}
 
 .accordion-button:focus:not(:focus-visible) {
   outline: none;
