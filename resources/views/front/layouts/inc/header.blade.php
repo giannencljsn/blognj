@@ -30,16 +30,16 @@
             <div class="centerit d-flex justify-content-center align-items-center ml-auto">
                 <a class="navbar-brand py-0" href="/">
                     <img loading="preload" decoding="async" class="img-fluid" src="{{ blogInfo()->blog_logo }}"
-                        alt="BLOGNJ" style="max-width: 100px">
+                        alt="BLOGNJ" style="max-width: 200px">
                 </a>
             </div>
 
-            <div class="navbar-actions">
+            <div class="navbar-actions" style="margin: 50px 0 !important;">
                 <button aria-label="navbar toggler" class="navbar-toggler border-0" type="button" data-toggle="collapse"
                     data-target="#navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <form action="http://blognj.lcl/search" class="search ml-auto">
+                <form action="{{ url('/search') }}" class="search ml-auto">
                     <input id="search-query" name="query" value="codeigniter" type="search" placeholder="Search..."
                         autocomplete="off">
                 </form>

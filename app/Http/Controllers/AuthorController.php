@@ -83,6 +83,48 @@ class AuthorController extends Controller
         }
     }
 
+    // Change dark blog logo
+
+    public function changeDarkBlogLogo(Request $request)
+    {
+        // Validate the request
+        $request->validate([
+            'logo_dark' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
+
+        // Fetch settings record
+        $settings = Setting::find(1);
+        $logo_path = 'back/dist/img/logo-favicon/';
+        $file = $request->file('logo_dark');
+        $filename = time() . '_' . rand(1, 100000) . '_larablog_dark_logo.png';
+
+        if ($file->isValid()) {
+            $old_logo = $settings->getAttributes()['logo_dark'];
+
+            // Delete the old logo file if it exists
+            if (!empty($old_logo) && File::exists(public_path($logo_path . $old_logo))) {
+                File::delete(public_path($logo_path . $old_logo));
+            }
+
+            // Ensure the logo path directory exists
+            if (!File::exists(public_path($logo_path))) {
+                File::makeDirectory(public_path($logo_path), 0755, true);
+            }
+
+            // Move the new file
+            $file->move(public_path($logo_path), $filename);
+
+            // Update the settings
+            $settings->update(['logo_dark' => $filename]);
+
+            return response()->json(['status' => 1, 'msg' => 'Larablog Dark logo has been successfully updated.']);
+        }
+
+        return response()->json(['status' => 0, 'msg' => 'No valid file uploaded.']);
+    }
+
+
+
     public function changeBlogFavicon(Request $request)
     {
         $settings = Setting::find(1);

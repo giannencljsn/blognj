@@ -10,17 +10,20 @@ class Setting extends Model
     use HasFactory;
 
     protected $fillable = [
-            'blog_name',
-            'blog_email',
-            'blog_description',
-            'blog_logo',
-            'blog_favicon',
+        'blog_name',
+        'blog_email',
+        'blog_description',
+        'blog_logo',
+        'logo_dark',
+        'blog_favicon',
     ];
 
-    public function getBlogLogoAttribute($value){
-        return asset('back/dist/img/logo-favicon/'.$value);
+    public function getBlogLogoAttribute($value)
+    {
+        return asset('back/dist/img/logo-favicon/' . $value);
     }
-    public function getBlogFaviconAttribute($value){
-        return asset('back/dist/img/logo-favicon/'.$value);
+    public function getBlogFaviconAttribute($value)
+    {
+        return asset('back/dist/img/logo-favicon/' . $value);
     }
 }
